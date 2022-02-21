@@ -46,7 +46,7 @@ html {
 
 body {
   margin: 0;
-  min-width: 320px;
+  min-width: 1170px;
   color: var(--dark-color);
   font: 16px/1.5 'Muller', sans-serif;
   font-weight: 400;
@@ -180,6 +180,7 @@ ul {
   font-size: 14px;
   line-height: 48px;
   color: #bebebe;
+  transition: opacity .2s ease-out, visibility .2s ease-out;
 }
 
 .search-field {
@@ -196,7 +197,8 @@ ul {
 }
 
 .search-field:focus+.search-label {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .search-submit-image {
@@ -229,12 +231,13 @@ ul {
 }
 
 .quick-reserv-form {
-  position: relative;
   width: 518px;
 }
 
 .reserv-list-item {
+  position: relative;
   margin-bottom: 24px;
+  overflow: hidden;
 }
 
 .form-field {
@@ -252,6 +255,7 @@ ul {
   font-size: 16px;
   line-height: 70px;
   color: #999;
+  transition: opacity .2s ease-out, transform .2s ease-out;
 }
 
 .form-field:focus {
@@ -259,7 +263,8 @@ ul {
 }
 
 .form-field:focus+.form-label {
-  display: none;
+  opacity: 0;
+  transform: translateY(-100%);
 }
 
 .form-textarea {
@@ -273,7 +278,8 @@ ul {
 }
 
 .form-textarea:focus+.form-label {
-  display: none;
+  opacity: 0;
+  transform: translateY(-100%);
 }
 
 .form-button {
@@ -684,6 +690,7 @@ ul {
 .feedback-item {
   position: relative;
   margin-bottom: 22px;
+  overflow: hidden;
 }
 
 .feedback-button {
